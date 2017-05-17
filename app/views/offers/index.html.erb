@@ -2,6 +2,6 @@
 
 <ul>
   <% @offers.each do |offer| %>
-    <li><%= offer.name %></li>
+    <li><%= link_to offer.name, offer_path(offer) %></li>
   <% end %>
 </ul>

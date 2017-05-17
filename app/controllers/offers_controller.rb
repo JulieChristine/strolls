@@ -3,4 +3,9 @@ class OffersController < ApplicationController
     @offers = Offer.all
     render :index
   end
-end 
+
+  def show
+    @offer = Offer.find(params[:id])
+    render :show
+  end 
+end
