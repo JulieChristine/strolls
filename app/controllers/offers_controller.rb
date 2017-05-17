@@ -7,5 +7,11 @@ class OffersController < ApplicationController
   def show
     @offer = Offer.find(params[:id])
     render :show
-  end 
+  end
+
+  def new
+    @offer = Offer.new
+    render :new
+  end
+
 end
