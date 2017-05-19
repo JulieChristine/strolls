@@ -3,4 +3,10 @@
   <p>This offer is valid until: <%= @offer.validity %></p>
   <p>Estimated savings: <%= @offer.savings %> HK$</p>
 
+  <p><%= link_to "Edit", edit_offer_path(@offer) %></p>
+  <p><%= link_to "Delete", offer_path(@offer),
+    :data => {:confirm => "Are you Sure?",
+      :method => "delete"} %></p>
+
+
   <p><%= link_to "Return to offers", offers_path %></p>
