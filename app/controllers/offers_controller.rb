@@ -23,6 +23,11 @@ class OffersController < ApplicationController
     end
   end
 
+  def edit
+    @offer = Offer.find(params[:id])
+    render :edit
+  end
+
   private
     def offer_params
       params.require(:offer).permit(:name, :savings, :validity)
