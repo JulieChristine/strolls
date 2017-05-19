@@ -1,20 +1,6 @@
 <h1>Edit Offer</h1>
 
-<% if @offer.errors.any? %>
-  <h3>Please fix these errors:</h3>
-  <ul>
-    <% @offer.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end  %>
+<%= render "form" %>
 
-<%= form_for @offer do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :savings %>
-  <%= f.number_field :savings %>
-  <%= f.label :validity %>
-  <%= f.date_field :validity %>
-  <%= f.submit  %>
-<% end %>
+<hr>
+<%=  link_to "Return to Offers", offers_path %>

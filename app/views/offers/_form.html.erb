@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @offer %>
+
+<%= form_for @offer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :savings %>
+  <%= f.number_field :savings %>
+  <%= f.label :validity %>
+  <%= f.date_field :validity %>
+  <%= f.submit  %>
+<% end %>
