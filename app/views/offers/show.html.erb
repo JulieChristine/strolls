@@ -1,3 +1,6 @@
 <h1><%= @offer.name %></h1>
 
-  <p><%= button_to "Return to offers", offers_path %></p>
+  <p>This offer is valid until: <%= @offer.validity %></p>
+  <p>Estimated savings: <%= @offer.savings %> HK$</p>
+
+  <p><%= link_to "Return to offers", offers_path %></p>
