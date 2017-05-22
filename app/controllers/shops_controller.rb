@@ -1,17 +1,14 @@
 class ShopsController < ApplicationController
   def index
     @shops = Shop.all
-    render :index
   end
 
   def show
     @shop = Shop.find(params[:id])
-    render :show
   end
 
   def new
     @shop = Shop.new
-    render :new
   end
 
   def create
@@ -26,7 +23,6 @@ class ShopsController < ApplicationController
 
   def edit
     @shop = Shop.find(params[:id])
-    render :edit
   end
 
   def destroy
