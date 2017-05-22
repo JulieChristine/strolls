@@ -6,7 +6,9 @@
     <ul>
       <% @shop.offers.each do |offer| %>
         <li>
-          <%= offer.description %> |
+          <%= offer.name %> |
+          estimate savings: <%= offer.savings %> |
+          valid until: <%= offer.validity %>
           <%= link_to "Edit", edit_shop_offer_path(@shop, offer) %> |
           <%= link_to "Delete", shop_offer_path(@shop, offer),
             :data => {:confirm => "Are you sure?",
