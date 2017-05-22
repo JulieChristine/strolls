@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :offers
+  resources :shops do
+    resources :offers
+  end
 end
