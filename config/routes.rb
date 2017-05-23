@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root :to => 'shops#index'
+
+  root 'landing#index'
+
+  resources :landing
 
   resources :shops do
     resources :offers, :except => [:index]
