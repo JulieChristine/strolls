@@ -1,5 +1,6 @@
 class OffersController < ApplicationController
-
+  before_filter :authenticate_user!
+  
   def new
     @shop = Shop.find(params[:shop_id])
     @offer = @shop.offers.new
