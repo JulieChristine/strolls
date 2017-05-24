@@ -1,5 +1,6 @@
 class Shop < ActiveRecord::Base
   has_many :offers
+  
 
   validates :name, :presence => true
   validates :address, :presence => true

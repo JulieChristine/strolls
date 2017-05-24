@@ -1,12 +1,18 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Handlee|Open+Sans');
 
 body {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/2b/56/02/2b5602645ed4f337cb4aa03a9e30e1f0.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #337ab7;
+  font-family: 'Handlee', cursive;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .jumbotron {
