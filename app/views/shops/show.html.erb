@@ -2,6 +2,23 @@
 
 <h1><%= @shop.name %></h1>
 
+<div class="container">
+  <div class="col-xs-3">
+    <%= @shop.description %>
+  </div>
+
+  <div class="col-xs-3">
+    <%= @shop.address %>
+  </div>
+
+  <div class="col-xs-3">
+    <%= image_tag  @shop.picture%>
+  </div>
+</div>
+
+<div class="container">
+
+
   <% if @shop.offers.any? %>
     <h4>Here are the offers for this shop:</h4>
 
@@ -28,3 +45,4 @@
             :method => "delete"} %></p>
 
   <p><%= link_to "Return to shops", shops_path %></p>
+</div>
